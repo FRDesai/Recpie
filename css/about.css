@@ -1,0 +1,87 @@
+@import url(//db.onlinewebfonts.com/c/1d4a19be544417215265a95523bb58c2?family=Cotoris);
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Cotoris";
+}
+
+.main .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 10em;
+}
+.main .top .image {
+  text-align: center;
+}
+.main .top .image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 500px;
+  max-height: 700px;
+}
+.main .top .description {
+  max-width: 500px;
+}
+.main .top .description h1 {
+  font-size: 2em;
+}
+.main .top .description p {
+  font-size: 2em;
+  padding: 0.5em 0;
+}
+
+.about {
+  background-color: #eaede8;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10em;
+}
+.about .about-image {
+  padding: 10em 10em;
+}
+.about .about-image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about .about-content {
+  font-size: 1.5em;
+}
+.about .about-content .left {
+  padding-left: 5em;
+}
+
+@media only screen and (max-width: 1000px) {
+  .main .top .image img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    max-width: 500px;
+    max-height: 700px;
+  }
+  .main .top .description {
+    padding-top: 2em;
+  }
+  .about {
+    display: block;
+    text-align: center;
+  }
+  .about .about-content {
+    padding: 2em 2em;
+  }
+  .about .about-content .left {
+    padding-left: 0;
+  }
+  .about .about-image {
+    padding: 4em 0 0 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main .top {
+    margin-bottom: 7em;
+  }
+  .main .description {
+    padding: 2em 2em 0 2em;
+  }
+}/*# sourceMappingURL=about.css.map */

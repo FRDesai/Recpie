@@ -1,0 +1,242 @@
+@import url(//db.onlinewebfonts.com/c/1d4a19be544417215265a95523bb58c2?family=Cotoris);
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Cotoris';
+}
+
+header {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        // justify-content: space-between;
+        padding: 0 50px;
+        background: white;
+    img {
+        width: 100%;
+    }
+     .header-left {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+     .header-left .logo {
+        width: 140px;
+    }
+    .header-left nav {
+        margin-right: 50px;
+    }
+    .header-left nav ul {
+        display: flex;
+    }
+    nav ul li a {
+        display: block;
+        color: black;
+        font-size: 18px;
+        padding: 5px 10px;
+        transition: 0.2s;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+        color: black;
+    }
+    nav .login-signup {
+        display: none;
+    }
+     .header-right {
+        display: flex;
+        align-items: center;
+    }
+     .login-signup {
+        color: #cfd9e0;
+        font-weight: bold;
+    }
+     .login-signup a {
+        display: inline-block;
+        color: #0b2239;
+        background: #4ad295;
+        padding: 5px 12px;
+        border-radius: 5px;
+    }
+     .header-right .hamburger {
+        margin-left: 20px;
+        cursor: pointer;
+        display: none;
+    }
+     .header-right .hamburger div {
+        width: 30px;
+        height: 2px;
+        margin: 6px 0;
+        background: black;
+    }
+  
+    
+}
+
+
+
+
+.main-image{
+    width: 100%;
+    
+    img{
+        width:100%;
+        
+    }
+}
+.content {
+    
+    padding: 0 5em;
+
+    
+    .latest-recpies{
+        font-family: 'Cotoris';
+        color: black;
+        padding: 0.5em 0;
+        font-size: 3em;
+
+        
+    }
+    .recipes{
+        display:flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1em;
+        
+        
+        div{
+            width: 200px;
+            line-height: 30px;
+            transition: 1s;
+
+            img:hover {
+                // border-radius: 25px;
+                box-shadow: 0 0 1px 1px grey;
+                transform: translate(0, -10px);
+             }
+            
+            img {
+                border-radius: 4px;
+                width: 100%;
+                height: auto;
+            }
+            a{
+                text-decoration: none;
+                color: Black;
+                
+            }
+
+            .desc{
+                h4{
+                    font-family: 'Cotoris';
+                    font-size: larger;
+                }
+                .tags{
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 0.2em;
+                    .category{
+                        background-color: #60765C;
+                        color :white;
+                        font-size: 0.8em;
+                        border-radius: 1px;
+                        border-radius: 8px;
+                        padding: 0.1em 1em;
+    
+                    }
+    
+                    .timer{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: #b04C35;
+                        color: white;
+                        font-size: 0.8em;
+                        border-radius: 1px;
+                        border-radius: 8px;
+                        img{
+                            width: 15px;
+                            height: 15px;
+                            margin: 0 0.3em;
+                        }
+                        
+                    }
+                }
+
+            }
+            
+
+           
+
+            
+        }
+        
+    }
+}
+
+@media screen and (max-width:600px) {
+    .navigation{
+        display: inline-block;
+        position: relative;
+        .nav-left{
+            .nav-menu{
+                display: none;
+            }
+        }
+        .nav-menu-block{
+            display: block;
+        }
+        .hamburger{
+            cursor: pointer;
+            display: block;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    }
+
+
+}
+
+@media only screen and (max-width: 1000px) {
+    header {
+        padding: 0 20px;
+    }
+    header .header-right .hamburger {
+        display: block;
+    }
+    header .header-left nav {
+        margin: 0;
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: fit-content;
+        background-color: white;
+        padding: 30px;
+        transition: 0.3s;
+        text-align: center;
+        z-index: -1;
+    }
+    header .header-left nav.active {
+        top: 70px;
+        z-index: 1000;
+    }
+    header .header-left nav ul {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    nav .login-signup {
+        display: block;
+        margin-top: 20px;
+    }
+    header .header-right .login-signup {
+        display: none;
+    }
+}
